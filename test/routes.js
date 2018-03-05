@@ -91,6 +91,8 @@ tape('should get reverse', function (t) {
   }
 
   var url = '/reverse/' + expected.input
+tape('should get echo', function (t) {
+  var url = '/echo?one=1&two=2'
   servertest(server(), url, {encoding: 'json'}, function (err, res) {
     t.ifError(err, 'no error')
 
